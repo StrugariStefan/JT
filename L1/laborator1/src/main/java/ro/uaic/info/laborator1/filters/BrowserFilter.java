@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServletRequest;
  * @author stefa
  */
 public class BrowserFilter implements Filter {
-    public static final String KEY_BROWSER_IDS = "browserIds";
-    public static final String KEY_BAD_BROWSER_URL = "badBrowserUrl";
- 
     private String[] browserIds;
     
     @Override

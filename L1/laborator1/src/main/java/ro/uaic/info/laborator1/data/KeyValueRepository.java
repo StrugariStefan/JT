@@ -1,5 +1,6 @@
-package ro.uaic.info.laborator1;
+package ro.uaic.info.laborator1.data;
 
+import ro.uaic.info.laborator1.models.KeyValueInputModel;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package ro.uaic.info.laborator1;
+package ro.uaic.info.laborator1.models;
 
 /**
  *

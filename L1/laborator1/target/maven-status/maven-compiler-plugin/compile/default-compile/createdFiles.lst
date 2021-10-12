@@ -1,6 +1,7 @@
+ro\uaic\info\laborator1\data\KeyValueRepository.class
 ro\uaic\info\laborator1\JAXRSConfiguration.class
 ro\uaic\info\laborator1\resources\JavaEE8Resource.class
-ro\uaic\info\laborator1\KeyValueInputModel.class
 ro\uaic\info\laborator1\KeyValueServlet.class
-ro\uaic\info\laborator1\KeyValueRepository.class
+ro\uaic\info\laborator1\models\KeyValueInputModel.class
+ro\uaic\info\laborator1\filters\KeyValueFormValidationFilter.class
 ro\uaic\info\laborator1\filters\BrowserFilter.class
