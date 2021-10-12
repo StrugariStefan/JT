@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Key Value Form</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+ 
+    <body>
+        <header class='header'>
+            <h1>Key Value Form</h1>
+        </header>
+
+        <form class='key-value-form' method="post" action="KeyValueServlet">
+            <div class='form-row'>
+                <label for='key'>Key</label>
+                <input id='key' name='key' type='text'/>
+            </div>
+            
+            <div class='form-row'>
+                <label for='value'>Value</label>
+                <input id='value' name='value' type='text'/>
+            </div>
+            
+            <div class='form-row'>
+                <label class='checkbox-label' for='mock'>
+                    <input id='mock'
+                           name='mock'
+                           type='checkbox'
+                           value='is-mock'/>
+                    <span>Mock</span>
+                </label>
+            </div>
+            
+            <div class='form-row'>
+                <label class='checkbox-label' for='sync'>
+                    <input id='sync'
+                           name='sync'
+                           type='checkbox'
+                           value='is-sync'/>
+                    <span>Sync</span>
+                </label>
+            </div>
+            
+            <div class='form-row'>
+                <input type='submit' value='Submit'/>
+            </div>
+        </form>
+    </body>
+</html>
