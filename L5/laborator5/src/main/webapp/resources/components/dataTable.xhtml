@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <cc:interface>
+        <cc:attribute name="title" />
+        <cc:attribute name="dataView" type="somepackage.MyAbstractDataView" />
+    </cc:interface>
+    <cc:implementation>
+        <p:dataTable id="dataTable" value="#{cc.attrs.dataView.items}" filteredValue="#{cc.attrs.dataView.filtered}" selectionMode="single">
+            <p:ajax event="rowDblselect" listener="#{cc.attrs.dataView.onRowDblClckSelect}" global="false" />
+            <p:ajax event="rowSelect" listener="#{cc.attrs.dataView.onRowSelect}" update="addBtn editBtn removeBtn emailBtn"/>
+            
+            <cc:insertFacet name="header"/>
+            <cc:insertChildren />
+            
+            <f:facet id="footer" name="footer">
+                <p:commandButton id="addBtn" update="dataTable" action="#{cc.attrs.dataView.add}"/>
+            </f:facet>
+        </p:dataTable>
+    </cc:implementation>
+</html>

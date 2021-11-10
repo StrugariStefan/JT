@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="dataTable.xhtml">
+        <ui:define name="content">
+            <h:form id="dataViewMsg">
+                <p:messages id="messages" for="dataForm" showDetail="false" autoUpdate="true" closable="true" />
+            </h:form>
+            
+            <h:form id="dataForm" style="background: white">
+                <ui:insert name="dataViewContent">
+                    A view of the data. May be a dataTable, or a list, etc.
+                </ui:insert>
+            </h:form>
+            
+            <ui:insert name="dialogs"/>
+        </ui:define>
+    </ui:composition>
+</html>
