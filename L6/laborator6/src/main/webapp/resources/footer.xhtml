@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <div class="wrap">
+        <div id="footer-wrap">
+            <div class="footer">        
+                <p>
+                    &amp;copy; FII 2020
+                </p>
+                <p>
+                    Version: #{versionBean.version}
+                </p>
+                <p>
+                    <h:form id="session">
+                        <p:poll interval="1" listener="#{sessionBean.setSessionCount}" update=":session"/>
+                        <p:outputLabel value="#{res.ActiveSessions}: #{sessionBean.sessionCount}" />
+                    </h:form>
+                </p>
+            </div>
+        </div>
+    </div>
+</html>
