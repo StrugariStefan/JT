@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>User Form Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <h:outputLabel for="username" value="Username: "/>
+            <h:inputText 
+                id="username" 
+                value="#{userRegistrationViewModel.username}"
+                required="true"
+                requiredMessage="Username is required">
+            </h:inputText> 
+
+            <br/>
+
+            <h:outputLabel for="password" value="Password: "/>
+            <h:inputSecret 
+                id="password" 
+                value="#{userRegistrationViewModel.password}"
+                required="true"
+                requiredMessage="Password is required">
+            </h:inputSecret> 
+
+            <br/>
+            
+            <h:outputLabel for="role" value="Role: "/>
+            <h:selectOneMenu id="role" value="#{userRegistrationViewModel.selectedRole}">
+                <f:selectItems value="#{userRegistrationViewModel.existingRoles}" var="r" itemLabel="#{r}" itemValue="#{r}" />
+            </h:selectOneMenu>
+
+            <h:commandButton id="add"
+                             value="Add"
+                             action="#{userRegistrationViewModel.add()}"/>
+
+            <br/>
+            
+        </h:form>
+    </body>
+</html>
