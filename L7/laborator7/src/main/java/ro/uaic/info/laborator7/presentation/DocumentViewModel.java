@@ -60,12 +60,10 @@ public class DocumentViewModel {
             return "index.xhtml";
         }
         
-        filename = Paths.get(uploadedFile.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
+        filename = Paths.get(uploadedFile.getSubmittedFileName()).getFileName().toString();
 
         InputStream input = uploadedFile.getInputStream();
-        
         content = IOUtils.toByteArray(input);
-        
         input.read(content);
         
         User user = loginSession.getUser().get();
